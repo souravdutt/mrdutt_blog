@@ -1,3 +1,4 @@
-# mrdutt_blog
-*note 1.
-to view latest changes (bugs free) move and replace "mystyle.css" file from from home directory (i.e. mrdutt_blog) to "assets/css/" directory
+#Sourav #Dutt
+This single sample page website is created using HTML CSS and JQuery which is responsive (mobile and tab friendly).
+If you want similer websites for business purpose, contact me:
+sdutt12139@gmail.com

@@ -124,7 +124,7 @@ a{
 .home .home_content{
 /*    background-color: #0000003b;*/
     position: absolute;
-    top:45%; left:50%;
+    top:52%; left:50%;
     color:white;
     width: 80%;
     transform: translate(-50%,-50%);
@@ -182,7 +182,8 @@ a{
     transition: .5s;
 }
 .goto_top_btn{
-    animation: get_focus 1s infinite forwards;
+    display: none;
+    animation: move_up_down 1s infinite forwards;
 }
 .goto_top_btn:hover{
     transform: scale(1.3,1.3);
@@ -198,7 +199,7 @@ a{
 }
 .goto_top_btn .down{
 }
-@keyframes get_focus{
+@keyframes move_up_down{
     0{
         bottom:50px;
     }
@@ -238,36 +239,48 @@ a{
 }
 .page3{
     min-height: 50vh;
+    padding:0;
+    margin:0;
+    width:100%;
     background: url(../images/backgrounds/projects.jpg) no-repeat bottom;
     background-size: cover;
     background-attachment:fixed;
 }
+/*
 .page3 div{
     position: relative;
+    margin:0;
     padding: 20px;
     color:white;
 }
+*/
 .page3 h2{
     text-align: center;
     padding: 0;
     margin:0
 }
-.sections{
-    width:100%; height: 100%;
-    margin:0;
-    padding: 0;
-    display: flex;
+.page3 ul{
+    max-width: 95%;
+    margin: 0 2.5%;
+    align-items: center;
 }
-.sec4in1{
-    margin: 2%;
-    height: 250px;min-width:250px;
+.page3 ul li{
+    float: left;
+    position: relative;
+    height: 250px;
+    width:24%;
+    margin: 0 0.4%;
+    padding: 20px 40px;
     overflow: hidden;
+}
+.sections .sec4in1:first-child{
+    margin-left: 0;
+}
+.sections .sec4in1:last-child{
+    margin-right: 0;
 }
 .sections .sec4in1 .project_name{
     padding: 0;
-}
-.sections .btn{
-    color:black;
 }
 .sections .project1{
     background: url(../images/backgrounds/icons/icon1.jpg) center;
@@ -336,10 +349,6 @@ a{
     transition: .5s;
     font-family: "Montserrat";
 }
-.page form input[type="submit"]{
-    font-family: "Montserrat";
-    height: 60px;
-}
 
 .page form input:focus{
     font-size: 130%;
@@ -360,7 +369,7 @@ a{
     text-shadow: 0px 0px 2px black;
     padding:15px;
     position: relative;
-    margin: 20px 0;
+    margin: 15px 0;
     cursor: pointer;
     transition: .5s;
     text-align: center;
@@ -376,7 +385,9 @@ a{
     border-radius: 5px;
     transform: scale(1.03,1.03);
 }
-
+.btn_half{
+    width: 49.59%;
+}
 
 
 
@@ -400,9 +411,44 @@ a{
         height: 250px; width:250px;
         background: gray;
     }
+    .btn_half{
+        width: 100%;
+    }
+    .page3 {
+        padding-bottom: 20px;
+    }
+    .page3 ul{
+        max-width: 60%;
+        margin: 0 20%;
+        align-items: center;
+    }
+    .page3 ul li{
+        float: left;
+        position: relative;
+        height: 250px;
+        width:48%;
+        margin: 1% 1%;
+        padding: 20px 15px;
+        overflow: hidden;
+    }
+    .sections .sec4in1:nth-child(1){
+        margin-left: 0;
+    }
+    .sections .sec4in1:nth-child(3){
+        margin-left: 0;
+    }
+    .sections .sec4in1:nth-child(2){
+        margin-right: 0;
+    }
+    .sections .sec4in1:nth-child(4){
+        margin-right: 0;
+    }
 
 }
 @media (max-width:720px){
+    *{
+        font-size: 0.9rem;
+    }
     .home .short_intro{
         font-size: 100%;
     }
@@ -431,6 +477,17 @@ a{
     .home .nav .nav_menu{
         display: none;
     }
-    
+    .page3 ul{
+        max-width: 70%;
+        margin: 0 15%;
+        align-items: center;
+        transform: translateX(0%);
+    }
+    .page3 ul li{
+        height: 250px;
+        width:100%;
+        margin: 4% 0;
+        padding: 30px 20px;
+    }
     
 }

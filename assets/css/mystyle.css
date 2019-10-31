@@ -36,6 +36,9 @@ a{
     background-attachment:fixed;
     background-size: cover;
 }
+.home .nav_mob{
+    display: none;
+}
 .home .nav{
     color: white;
     position: absolute;
@@ -449,8 +452,52 @@ a{
     *{
         font-size: 0.9rem;
     }
+    .home .nav{
+        display: none;
+    }
+    .home .nav_mob{
+        display: block;
+    }
     .home .short_intro{
         font-size: 100%;
+    }
+    .home .nav_mob .nav_mob_logo{
+        position: absolute;
+        top:0;
+        left:0;
+        color:white;
+        width:100%;
+        text-align: center;
+        padding:10px;
+        font-size: 180%;
+        background-image: linear-gradient(to bottom right, #000000, #3c3c3c);
+        cursor: pointer;
+        transition: .3s;
+    }
+    .home .nav_mob .nav_mob_logo:hover{
+        font-size: 200%;;
+    }
+    .home .nav_mob .nav_mob_menu{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width:100%;
+        color: white;
+        z-index: 999;
+        background-image: linear-gradient(to bottom right, #000000, #3c3c3c);
+        text-align: center;
+    }
+    .home .nav_mob .nav_mob_menu ul li{
+        list-style-type: none;
+        min-width: 20%;
+        padding: 9px;
+        float:left;
+        border-right: 1px solid white;
+    }
+    .home .nav_mob .nav_mob_menu ul li ul li{
+        border-right: 0px solid white;
+        float:none;
+        display: none;
     }
     .home .i_can {
         margin-left: 5%;

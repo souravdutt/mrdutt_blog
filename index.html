@@ -20,7 +20,7 @@
             <div class="nav_menu">
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#" class="home_btn">Home</a>
                     </li>
                     <li>
                         <a href="#" class="about_btn">About</a>
@@ -57,23 +57,25 @@
                 
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a class="menu_item home_btn" href="#"><img src="assets/images/icons/home.svg" height="20px"><br>Home</a>
                     </li>
                     <li>
-                        <a href="#" class="about_btn">About</a>
+                        <a class="menu_item about_btn" href="#" class="about_btn"><img src="assets/images/icons/about.svg" height="20px"><br>About</a>
                     </li>
                     <li>
-                        <a href="#" class="my_project_btn">My Projects</a>
+                        <a class="menu_item my_project_btn" href="#" class="my_project_btn"><img src="assets/images/icons/projects.svg" height="20px"><br>Projects</a>
                     </li>
                     <li>
-                        <a href="#" class="contact_btn">Contact Me</a>
+                        <a class="menu_item contact_btn" href="#" class="contact_btn"><img src="assets/images/icons/contact.svg" height="20px"><br>Contacts</a>
                     </li>
+<!--
                     <li class="nav_menu_last">
                         <ul>
-                            <a href="#" class="nav_dropdown">
-                                <span>More</span>
+                            <span class="nav_dropdown">
+                                <br>
+                                <img src="assets/images/icons/more.svg" height="20px">
                                 <i class="down"></i>&nbsp;&nbsp;
-                            </a>
+                            </span>
                             <li>
                                 Tutorials
                             </li>
@@ -82,6 +84,7 @@
                             </li>
                         </ul>
                     </li>
+-->
                 </ul>
             </center>
             </div>
@@ -121,7 +124,7 @@
         <div>
             <h2>Personal Information:</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo fugiat quis officia nobis adipisci a dolores iure provident, molestias? Sunt, esse! Possimus dolore, ipsam voluptatum explicabo. Similique ratione libero cum necessitatibus ipsam, eius voluptatibus animi explicabo, nihil harum, quia ipsum expedita voluptates illum possimus exercitationem vitae mollitia veniam sit atque suscipit provident praesentium corporis, ipsa rerum? Blanditiis, doloribus dolores debitis, eos sit quod beatae nemo rerum non dignissimos assumenda magni? Architecto inventore fugit eligendi modi reiciendis, illo nihil reprehenderit beatae ullam neque, voluptate pariatur veritatis suscipit repudiandae vitae temporibus quia consequuntur itaque aliquam ipsum. Ipsa harum possimus dignissimos doloribus ea placeat, aspernatur iusto illum corrupti tenetur laudantium, dolorum. Fugit vitae consequatur, saepe animi odit. Ratione eius quibusdam in ipsa nisi assumenda quaerat inventore reiciendis unde asperiores beatae obcaecati blanditiis molestias quod ullam saepe commodi enim, odio ut eveniet excepturi accusantium nihil modi dolorem velit! Quas vitae accusantium soluta sed repudiandae! 
+                (It is just a sample text) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo fugiat quis officia nobis adipisci a dolores iure provident, molestias? Sunt, esse! Possimus dolore, ipsam voluptatum explicabo. Similique ratione libero cum necessitatibus ipsam, eius voluptatibus animi explicabo, nihil harum, quia ipsum expedita voluptates illum possimus exercitationem vitae mollitia veniam sit atque suscipit provident praesentium corporis, ipsa rerum? Blanditiis, doloribus dolores debitis, eos sit quod beatae nemo rerum non dignissimos assumenda magni? Architecto inventore fugit eligendi modi reiciendis, illo nihil reprehenderit beatae ullam neque, voluptate pariatur veritatis suscipit repudiandae vitae temporibus quia consequuntur itaque aliquam ipsum. Ipsa harum possimus dignissimos doloribus ea placeat, aspernatur iusto illum corrupti tenetur laudantium, dolorum. Fugit vitae consequatur, saepe animi odit. Ratione eius quibusdam in ipsa nisi assumenda quaerat inventore reiciendis unde asperiores beatae obcaecati blanditiis molestias quod ullam saepe commodi enim, odio ut eveniet excepturi accusantium nihil modi dolorem velit! Quas vitae accusantium soluta sed repudiandae! 
             </p>
             <h2>Experiences:</h2>
             <p>
@@ -198,11 +201,28 @@
             </form>
         </div>
     </div>
+    <div class="footer">
+            developed by "Sourav Dutt"
+            <br>
+            &copy; 2019- "DuttTech"
+        <p>
+            <span class="crossed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            &nbsp;End of page&nbsp;
+            <span class="crossed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <br>
+            <span class="home_btn">Click here</span> to goto Top
+        </p>
+    </div>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script>
         $(document).ready(function(){
             $('.nav_dropdown').click(function(){
                 $(this).siblings("li").slideToggle("fast");
+            });
+            $('.home_btn').click(function(){
+                $('html, body').animate({
+                    scrollTop: $("#home").offset().top
+                }, 1000); 
             });
             $('.about_btn').click(function(){
                 $('html, body').animate({

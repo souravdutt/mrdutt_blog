@@ -21,6 +21,10 @@ font-family: 'Turret Road', cursive;
     box-sizing: border-box;
     font-size: 1.01em;
 }
+body{
+    max-width:100%;
+    
+}
 a{
     text-decoration: none;
     color: white;
@@ -177,7 +181,7 @@ a{
 }
 .goto_top_btn{
     position: fixed;
-    bottom:50px;
+    bottom:80px;
     right:50px;
     z-index: 9999;
     cursor: pointer;
@@ -204,10 +208,10 @@ a{
 }
 @keyframes move_up_down{
     0{
-        bottom:50px;
+        bottom:80px;
     }
     50%{
-        bottom:55px;
+        bottom:85px;
     }
 }
 .page{
@@ -391,8 +395,36 @@ a{
 .btn_half{
     width: 49.59%;
 }
-
-
+.footer{
+    position: relative;
+    min-height: 50px;
+    width:100%;
+    color:black;
+    background: white;
+    text-align: center;
+    font-size: 120%;
+    font-family: "Montserrat";
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 10px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+.footer p{
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 80%;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: gray;
+}
+.footer .crossed{
+    text-decoration: line-through;
+}
+.footer .home_btn{
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 @media (max-width:1020px){
     .home .short_intro{
@@ -473,6 +505,7 @@ a{
         background-image: linear-gradient(to bottom right, #000000, #3c3c3c);
         cursor: pointer;
         transition: .3s;
+        letter-spacing: 2px;
     }
     .home .nav_mob .nav_mob_logo:hover{
         font-size: 200%;;
@@ -489,15 +522,30 @@ a{
     }
     .home .nav_mob .nav_mob_menu ul li{
         list-style-type: none;
-        min-width: 20%;
-        padding: 9px;
+        min-width: 25%;
+        padding: 8px;
         float:left;
         border-right: 1px solid white;
+    }
+    .home .nav_mob .nav_mob_menu ul li:last-child{
+        border-right: 0px;
+    }
+    .home .nav_mob .nav_mob_menu ul li img{
+        transition: .3s;
+    }
+    .home .nav_mob .nav_mob_menu ul li:hover img{
+        transform: scale(1.4,1.4);
+    }
+    .home .nav_mob .nav_dropdown{
+        cursor:pointer;
     }
     .home .nav_mob .nav_mob_menu ul li ul li{
         border-right: 0px solid white;
         float:none;
         display: none;
+    }
+    .goto_top_btn{
+        bottom:80px;
     }
     .home .i_can {
         margin-left: 5%;
@@ -535,6 +583,9 @@ a{
         width:100%;
         margin: 4% 0;
         padding: 30px 20px;
+    }
+    .footer{
+        margin-bottom: 55px;
     }
     
 }
